@@ -17,6 +17,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install packages
-        run: npm install mocha ganache-cli web3
+        run: npm install
       - name: Run Test
         run: npm test
