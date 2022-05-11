@@ -1,0 +1,5 @@
+-- Installations---
+- npm install solc@0.4.17
+- npm install --save mocha ganache-cli web3
+- npm install @truffle/hdwallet-provider
+- npm install dotenv
