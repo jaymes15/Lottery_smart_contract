@@ -139,6 +139,10 @@ describe('Lottery', () => {
 
     assert(difference < web3.utils.toWei('1.8', 'ether'));
 
+    const lotteryWinner = await lottery.methods.getWinnerFromPrevLottery().call();
+    // Assert winner is player1
+    assert.equal(player1, lotteryWinner);
+
   });
 
 
