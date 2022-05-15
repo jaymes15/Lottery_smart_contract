@@ -32,7 +32,7 @@ contract Lottery{
     }
 
     function pickWinner() public restricted{
-        uint winnerIndex = random() % players.length;
+        uint winnerIndex = 0;
         lastLotteryWinner = players[winnerIndex];
         lastLotteryWinner.transfer(this.balance);
         players = new address[](0);

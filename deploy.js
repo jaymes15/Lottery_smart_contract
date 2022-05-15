@@ -16,11 +16,12 @@ const deploy = async () => {
 
   accounts = await web3.eth.getAccounts();
 
-  const inbox = await new web3.eth.Contract(JSON.parse(interface))
+  const lottery = await new web3.eth.Contract(JSON.parse(interface))
   .deploy({data: bytecode})
   .send({from: accounts[0], gas: '1000000'});
 
-  console.log("Contract address", inbox.options.address);
+  console.log("interface ABI", interface);
+  console.log("Contract address", lottery.options.address);
 
   provider.engine.stop();
 }
